@@ -34,7 +34,6 @@ if __name__ == '__main__':
             mydata = '{"entity_id":"switch.fritz_box_7490_port_forward_http_server"}'
             response = requests.request("POST", url, headers=headers, data=mydata)
             print(response.text)
-            jdata = json.loads(response.text)
 
             cmd = 'sudo certbot renew'
             os.system(cmd)
@@ -53,9 +52,6 @@ if __name__ == '__main__':
             mydata = '{"entity_id":"switch.fritz_box_7490_port_forward_http_server"}'
             response = requests.request("POST", url, headers=headers, data=mydata)
             print(response.text)
-            jdata = json.loads(response.text)
-            #for i in jdata:
-            #    print(i, jdata[i])
         print('finished updating cert')
     else:
         print('{0} days left before update of letsencrypt cert required.'.format(days_left))
