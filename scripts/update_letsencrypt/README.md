@@ -7,4 +7,6 @@ prerequisites:
  * access token is created in hass installation and correctly entered in this script
  * date.sh script is accessible and executable to calculate age of certificate
  * this python script runs as cronjob
+ * hass installation should consist of openssl package in alpine linux distribution:
+   * apk update && apk add openssl  
 
